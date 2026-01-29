@@ -23,6 +23,10 @@ export function parseLine(line) {
   const question = split[4];
   const answer = split[5];
 
+  if (categoryNumber === '') {
+    return null;
+  }
+
   const q = {
     categoryNumber,
     subCategory,

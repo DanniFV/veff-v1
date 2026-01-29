@@ -12,7 +12,7 @@ describe('parse', () => {
   describe('parseLine', () => {
     it('should parse the empty string and return null', () => {
       // Arrange
-      const input = "4,,3,2,q,a";
+      const input = "4,a,3,2,q,a";
 
       //act
       const output = parseLine(input);

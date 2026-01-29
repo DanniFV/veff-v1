@@ -5,14 +5,6 @@ if (!correctElement || !incorrectElement) {
     console.error('unable to find elements')
 }
 
-function showAnswer(e) {
-    const button = e.target;
-    const parentQuestion = button.closest(`.question`)
-    const answer = parentQuestion.querySelector(`.answer`)
-
-    answer.hidden = false;
-}
-
 function questionAnswerListener(e) {
     const button = e.target;
 
@@ -23,6 +15,7 @@ function questionAnswerListener(e) {
     //Todo disable á takka
     const incorrectButton = parentQuestion.querySelector(".button-incorrect");
     const correctButton = parentQuestion.querySelector(".button-correct");
+    const showButton = parentQuestion.querySelector(".button-show");
 
     console.log(button.parentQuestion)
 
@@ -52,6 +45,8 @@ function questionAnswerListener(e) {
 
     } else {
         answer.hidden = false;
+        showButton.disabled = true;
+        showButton.hidden = true;
 
     }
 

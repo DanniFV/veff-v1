@@ -1,1 +1,120 @@
-/* útfæra */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    align-items: center;
+    font-family: monospace;
+}
+
+header {
+    width: 100%;
+    display: contents;
+    
+}
+
+h2 {
+    color: brown;
+    
+}
+
+p {
+    color: brown;
+    font-size: large;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    font-size: large;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    flex: 0 0 50%;
+    padding: 1em, 1.5em;
+    margin-bottom: 1em;
+    background-color: burlywood;
+    text-align: center;
+    border-radius: 50px;
+}
+
+ul li a {
+    color: brown;
+    
+}
+
+.counter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    font-size: large;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.question {
+    text-align: center;
+    background-color: whitesmoke;
+    justify-self: center;
+    border: groove;
+    margin: 1%;
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+}
+
+.questions h2 {
+    text-align: center;
+    background-color: burlywood;
+    padding: 1%;
+}
+
+.questions h3{
+    text-align: center;
+    background-color: burlywood;
+    padding: 1%;
+    grid-column: 1 / -1;
+}
+
+.question .button {
+    gap: 1%;
+}
+
+.question .button-show {
+    grid-column: 1 / -1;
+}
+
+.question .answer {
+    grid-column: 1 / -1;
+}
+
+.question .button-correct {
+    background-color: green;
+}
+
+.question .button-incorrect {
+    background-color: red;
+}
+
+@media (max-width: 650px) {
+
+  ul, .counter {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .question {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  ul li {
+    border-radius: 18px;
+  }
+}
+
