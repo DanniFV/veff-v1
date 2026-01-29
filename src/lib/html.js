@@ -1,9 +1,36 @@
+export function generateIndexHtml() {
+    const html = /* HTML */`
+    <html>
+        <head>
+            <script src="scripts.js" type="module"></script>
+        </head>
+        <body>
+            <h2>Velkomin velkomin!</h2>
+            <p>Veldu Flokk sem þú vilt svara spurningum úr</p>
+            <ul>
+                <li><a href="saga.html"> Saga </a></li>
+                <li><a href="general.html"> Almenn kunnátta </a></li>
+                <li><a href="science.html"> Náttúra og vísindi </a></li>
+                <li><a href="art.html"> Bókmenntir og List </a></li>
+                <li><a href="geography.html"> Landafræði </a></li>
+                <li><a href="fun.html"> Skemmtun og afþreying </a></li>
+                <li><a href="sport.html"> Íþróttir og tómstundir </a></li>
+            </ul>
+        </body>
+    </html>
+    `;
+    
+    return html;    
+}
+
+
 export function generateQuestionHtml(q) {
 
     const html = /* HTML */ `
   <section class="question" data-answered="False">
     <h3>${q.question}</h3>
-    <p>${q.answer}</p>
+    <button type="button" class="button button-show" onClick="showAnswer"> Sýna svar</button>
+    <p class="answer" hidden>${q.answer}</p>
     <button type="button" class="button button-correct"> Rétt </button>
     <button type="button" class="button button-incorrect"> Rangt </button>
   </section>`;
@@ -15,10 +42,11 @@ export function generateQuestionCategoryHtml(title, questionsHtml) {
     const html = /* HTML */`
     <html>
         <head>
-            <script src="script.js" type="module"></script>
+            <script src="scripts.js" type="module"></script>
         </head>
         <body>
             <h1>Spurningarleikur</h1>
+            <p><a href="index.html">Til baka</a></p>
             <div class="counter">
                 <div class="correct">0</div>
                 <div class="incorrect">0</div>
